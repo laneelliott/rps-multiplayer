@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Rock Paper Scissors MPO</title>
+
+	<!-- Bootstrap CDN -->
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+<body>
+	<header class="container">
+		<div class="row text-center">
+			<h1>Rock Paper Scissors</h1>
+		</div>
+	</header>
+	<section class="container">
+		<div class="row name-input">
+			<div class="col-sm-6 col-sm-offset-3 text-center">
+				<input type="text" name="name" id="name">
+				<button id="submit">Submit</button>
+			</div>
+		</div> <!-- end row -->
+
+		<div class="row game-display">
+			<div class="col-sm-12 text-center">
+				<h3 id="welcome">Hi Lane, You are Player 1</h3>
+			</div> <!-- end col-sm-12 -->
+		</div> <!-- end row -->
+
+		<div class="row game-display">
+			<div class="col-sm-12 text-center">
+				<h3 id="status">Waiting for Player 2</h3>
+			</div> <!-- end col-sm-12 -->
+		</div> <!-- end row -->
+
+		<div class="row">
+			<div class="col-sm-4 game-view" id="player1">
+				<div class="row text-center">
+					<h3>Player 1's Name</h3>
+				</div>
+			</div> <!-- end col-sm-4 -->
+			<div class="col-sm-4 game-view" id="outcome">
+				<div class="row  text-center">
+					<h3>Outcome of the Game</h3>
+				</div>
+			</div> <!-- end col-sm-4 -->
+			<div class="col-sm-4 game-view" id="player2">
+				<div class="row  text-center">
+					<h3>Player 2's Name</h3>
+				</div>
+			</div> <!-- end col-sm-4 -->
+		</div> <!-- end row -->
+
+		<div class="row">
+			<div class="col-sm-6 col-sm-offset-3" id="chat">
+				<p>Hello and welcome to rock paper scissors</p>
+			</div> <!-- end col-sm-6 -->
+		</div> <!-- end row -->
+		<div class="row">
+			<div class="col-sm-6 col-sm-offset-3 text-center">
+				<input type="text" name="name" id="message">
+				<button id="send">Send</button>
+			</div>
+		</div>
+	</section> <!-- end section -->
+
+	<!-- JQuery CDN -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<!-- Bootstrap JS CDN -->
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
