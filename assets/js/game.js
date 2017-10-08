@@ -11,7 +11,7 @@ firebase.initializeApp(config);
 
 //Global Variables
 var database = firebase.database();
-var player1, player2;
+var player1, player2, user;
 
 //Set player1 and player2 variables from database
 database.ref('players').on('child_added', function(snapshot){
@@ -24,21 +24,31 @@ database.ref('players').on('child_added', function(snapshot){
   }
 });
 
+//User Disconnects and Firebase is updated
+database.ref('players').onDisconnect().set("disconnected");
+database.ref('players').onDisconnect().remove();
+
 //User Logs in
 $('#submit').on('click', function(){
+  database.ref('players').child('1').remove();
   var userName = $('#name').val();
   if(player1 == null || player1 == '' ){
     database.ref('players').child('1').set({ 
       name: userName,
       win: 0,
-      loss: 0
+      loss: 0,
+      player: 1
     })
+    user = player1;
   } else if(player2 == null || player2 == '' ){
     database.ref('players').child('2').set({
       name: userName,
       win: 0,
-      loss: 0
+      loss: 0,
+      player: 2
     })
+    user = player2;
   }
 });
+
 
